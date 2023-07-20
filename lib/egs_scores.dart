@@ -23,6 +23,11 @@ class EgsScores extends StatelessWidget {
           themeMode: ThemeMode.light,
           title: 'Egs Scores'.tr,
           defaultTransition: Transition.rightToLeftWithFade,
+          home: const Scaffold(
+            body: Center(
+              child: Text('Egs Scores'),
+            ),
+          ),
         );
       },
     );
