@@ -1,3 +1,5 @@
+import 'package:egs_scores/core/font_family/font_family.dart';
+import 'package:egs_scores/presentation/home/ui/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -20,9 +22,12 @@ class EgsScores extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           locale: const Locale('en', 'US'),
+          theme:
+              ThemeData(fontFamily: FontFamily.varelaRound, useMaterial3: true),
           themeMode: ThemeMode.light,
           title: 'Egs Scores'.tr,
           defaultTransition: Transition.rightToLeftWithFade,
+          home: const HomePage(),
         );
       },
     );
