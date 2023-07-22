@@ -11,11 +11,7 @@ class EgsScores extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _setUpStatusBarColor();
-    SystemChrome.setPreferredOrientations(
-      [
-        DeviceOrientation.portraitUp,
-      ],
-    );
+    _setOriantation();
 
     return ResponsiveSizer(
       builder: (context, orientation, screenType) {
@@ -27,16 +23,25 @@ class EgsScores extends StatelessWidget {
           themeMode: ThemeMode.light,
           title: 'Egs Scores'.tr,
           defaultTransition: Transition.rightToLeftWithFade,
-          home: const HomePage(),
+          home: HomePage(),
         );
       },
     );
   }
 
   static void _setUpStatusBarColor() {
-    const Color color = Colors.transparent;
+    const Color color = Colors.white;
     const SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(
-        systemNavigationBarColor: color, statusBarColor: color);
+      systemNavigationBarColor: color,
+      statusBarColor: color,
+    );
     SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+  }
+
+  static void _setOriantation() {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
   }
 }

@@ -1,6 +1,6 @@
 import 'package:egs_scores/core/config/pro_colors.dart';
 import 'package:egs_scores/core/font_family/font_family.dart';
-import 'package:egs_scores/core/util/desktop_screen.dart';
+import 'package:egs_scores/core/util/egs_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'package:responsive_sizer/responsive_sizer.dart';
@@ -9,9 +9,9 @@ final ThemeData lightTheme = ThemeData(
   useMaterial3: true,
   fontFamily: FontFamily.poppins,
   brightness: Brightness.light,
-  primaryColor: DrutoPayColors.primaryColor,
-  scaffoldBackgroundColor: DrutoPayColors.backgroundColor,
-  cardColor: DrutoPayColors.lightCardColor,
+  primaryColor: EgsColors.primaryColor,
+  scaffoldBackgroundColor: EgsColors.backgroundColor,
+  cardColor: EgsColors.lightCardColor,
   appBarTheme: const AppBarTheme(
     color: Color(0xff0E9577),
     titleTextStyle: TextStyle(color: Colors.black),
@@ -34,8 +34,8 @@ final ThemeData lightTheme = ThemeData(
     textTheme: ButtonTextTheme.primary,
     colorScheme: ColorScheme(
       primary: Color(0xff10ad72),
-      secondary: DrutoPayColors.secondaryColor,
-      surface: DrutoPayColors.backgroundColor,
+      secondary: EgsColors.secondaryColor,
+      surface: EgsColors.backgroundColor,
       background: Color(0xffa2f6d7),
       error: Color(0xffd32f2f),
       onPrimary: Color(0xffffffff),
@@ -54,62 +54,62 @@ final ThemeData lightTheme = ThemeData(
     displayLarge: TextStyle(
       fontFamily: FontFamily.poppins,
       fontWeight: FontWeight.w700,
-      color: DrutoPayColors.titleColor,
-      fontSize: DrutoPayScreen.isMobile ? 18.px : 30.px,
+      color: EgsColors.titleColor,
+      fontSize: EgsScreen.isMobile ? 18.px : 30.px,
     ),
     displayMedium: TextStyle(
       fontFamily: FontFamily.poppins,
       fontWeight: FontWeight.w700,
-      color: DrutoPayColors.titleColor,
-      fontSize: DrutoPayScreen.isMobile ? 18.px : 30.px,
+      color: EgsColors.titleColor,
+      fontSize: EgsScreen.isMobile ? 18.px : 30.px,
     ),
     titleLarge: TextStyle(
       fontFamily: FontFamily.poppins,
       fontWeight: FontWeight.w700,
-      color: DrutoPayColors.titleColor,
-      fontSize: DrutoPayScreen.isMobile ? 20.px : 34.px,
+      color: EgsColors.titleColor,
+      fontSize: EgsScreen.isMobile ? 20.px : 34.px,
     ),
     titleMedium: TextStyle(
       fontFamily: FontFamily.poppins,
       fontWeight: FontWeight.w600,
-      color: DrutoPayColors.titleColor,
-      fontSize: DrutoPayScreen.isMobile ? 12.px : 22.px,
+      color: EgsColors.titleColor,
+      fontSize: EgsScreen.isMobile ? 12.px : 22.px,
     ),
     bodyMedium: TextStyle(
       fontFamily: FontFamily.poppins,
       fontWeight: FontWeight.w600,
-      color: DrutoPayColors.titleColor,
-      fontSize: DrutoPayScreen.isMobile ? 14.px : 22.px,
+      color: EgsColors.titleColor,
+      fontSize: EgsScreen.isMobile ? 14.px : 22.px,
     ),
     bodySmall: TextStyle(
       fontFamily: FontFamily.roboto,
       fontWeight: FontWeight.w400,
       height: 1.2,
-      color: DrutoPayColors.subTitleColor,
-      fontSize: DrutoPayScreen.isMobile ? 12.px : 15.sp,
+      color: EgsColors.subTitleColor,
+      fontSize: EgsScreen.isMobile ? 12.px : 15.sp,
     ),
     titleSmall: TextStyle(
       fontFamily: FontFamily.poppins,
       fontWeight: FontWeight.w800,
-      color: DrutoPayColors.titleColor,
-      fontSize: DrutoPayScreen.isMobile ? 16.px : 28.px,
+      color: EgsColors.titleColor,
+      fontSize: EgsScreen.isMobile ? 16.px : 28.px,
     ),
   ),
   colorScheme: const ColorScheme(
-    primary: DrutoPayColors.primaryColor,
-    onPrimary: DrutoPayColors.whiteColor,
-    secondary: DrutoPayColors.secondaryColor,
+    primary: EgsColors.primaryColor,
+    onPrimary: EgsColors.whiteColor,
+    secondary: EgsColors.secondaryColor,
     onSecondary: Color(0xff000000),
-    surface: DrutoPayColors.backgroundColor,
+    surface: EgsColors.backgroundColor,
     onSurface: Color(0xff000000),
     background: Color(0xffa2f6d7),
     onBackground: Color(0xffffffff),
-    onSurfaceVariant: DrutoPayColors.subTitleColor, //subtitle COlor
+    onSurfaceVariant: EgsColors.subTitleColor, //subtitle COlor
     outline: Color(0xffA9AFB5), //border color
     error: Color(0xffd32f2f),
     onError: Color(0xffffffff),
-    inversePrimary: DrutoPayColors.titleColor,
-    onInverseSurface: DrutoPayColors.titleColor,
+    inversePrimary: EgsColors.titleColor,
+    onInverseSurface: EgsColors.titleColor,
     brightness: Brightness.light,
   ),
 );
@@ -118,9 +118,9 @@ final ThemeData lightTheme = ThemeData(
 final ThemeData darkTheme = ThemeData(
   fontFamily: FontFamily.poppins,
   brightness: Brightness.dark,
-  primaryColor: DrutoPayColors.primaryColor,
-  scaffoldBackgroundColor: DrutoPayColors.darkBackgroundColor,
-  cardColor: DrutoPayColors.darkCardColor,
+  primaryColor: EgsColors.primaryColor,
+  scaffoldBackgroundColor: EgsColors.darkBackgroundColor,
+  cardColor: EgsColors.darkCardColor,
   appBarTheme: const AppBarTheme(
     color: Colors.white,
     iconTheme: IconThemeData(
@@ -129,62 +129,62 @@ final ThemeData darkTheme = ThemeData(
     elevation: 0,
   ),
   dividerTheme: const DividerThemeData(
-    color: DrutoPayColors.backgroundColor,
+    color: EgsColors.backgroundColor,
     thickness: 1,
   ),
   textTheme: TextTheme(
     displayLarge: TextStyle(
       fontFamily: FontFamily.poppins,
       fontWeight: FontWeight.w700,
-      color: DrutoPayColors.darkTextColro,
-      fontSize: DrutoPayScreen.isMobile ? 18.px : 30.px,
+      color: EgsColors.darkTextColro,
+      fontSize: EgsScreen.isMobile ? 18.px : 30.px,
     ),
     bodyLarge: TextStyle(
       fontFamily: FontFamily.poppins,
       fontWeight: FontWeight.w600,
-      color: DrutoPayColors.darkTextColro,
+      color: EgsColors.darkTextColro,
       fontSize: 16.px,
     ),
     bodyMedium: TextStyle(
       fontFamily: FontFamily.poppins,
       fontWeight: FontWeight.w600,
-      color: DrutoPayColors.darkTextColro,
-      fontSize: DrutoPayScreen.isMobile ? 14.px : 22.px,
+      color: EgsColors.darkTextColro,
+      fontSize: EgsScreen.isMobile ? 14.px : 22.px,
     ),
     titleMedium: TextStyle(
       fontFamily: FontFamily.roboto,
       fontWeight: FontWeight.w400,
-      color: DrutoPayColors.darkTextColro,
-      fontSize: DrutoPayScreen.isMobile ? 12.px : 20.px,
+      color: EgsColors.darkTextColro,
+      fontSize: EgsScreen.isMobile ? 12.px : 20.px,
     ),
     titleSmall: TextStyle(
       fontFamily: FontFamily.poppins,
       fontWeight: FontWeight.w800,
-      color: DrutoPayColors.darkTitleColor,
-      fontSize: DrutoPayScreen.isMobile ? 16.px : 28.px,
+      color: EgsColors.darkTitleColor,
+      fontSize: EgsScreen.isMobile ? 16.px : 28.px,
     ),
     bodySmall: TextStyle(
       fontFamily: FontFamily.roboto,
       fontWeight: FontWeight.w400,
-      color: DrutoPayColors.whiteColor.withOpacity(.6),
+      color: EgsColors.whiteColor.withOpacity(.6),
       height: 1.5,
-      fontSize: DrutoPayScreen.isMobile ? 12.px : 15.sp,
+      fontSize: EgsScreen.isMobile ? 12.px : 15.sp,
     ),
   ),
   colorScheme: const ColorScheme(
-    primary: DrutoPayColors.primaryColor,
-    onPrimary: DrutoPayColors.whiteColor,
-    secondary: DrutoPayColors.darkBackgroundColor,
+    primary: EgsColors.primaryColor,
+    onPrimary: EgsColors.whiteColor,
+    secondary: EgsColors.darkBackgroundColor,
     onSecondary: Color(0xff000000),
-    surface: DrutoPayColors.darkBackgroundColor,
+    surface: EgsColors.darkBackgroundColor,
     onSurface: Color(0xff000000),
     background: Color(0xffa2f6d7),
     onBackground: Color(0xffffffff),
     error: Color(0xffd32f2f),
     onError: Color(0xffffffff),
-    onSurfaceVariant: DrutoPayColors.darkSubTitleColor, //subtitle COlor
-    inversePrimary: DrutoPayColors.darkTitleColor,
-    onInverseSurface: DrutoPayColors.darkTitleColor,
+    onSurfaceVariant: EgsColors.darkSubTitleColor, //subtitle COlor
+    inversePrimary: EgsColors.darkTitleColor,
+    onInverseSurface: EgsColors.darkTitleColor,
     outline: Color(0xffA9AFB5), //border color
     onTertiary: Color(0xff474747),
     brightness: Brightness.dark,
