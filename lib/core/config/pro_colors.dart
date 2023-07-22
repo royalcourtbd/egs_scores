@@ -1,8 +1,8 @@
 import 'dart:ui';
 
-class DrutoPayColors {
+class EgsColors {
   //Primary Color
-  static const Color primaryColor = Color(0xff148F5A);
+  static const Color primaryColor = Color(0xff64a19d);
 
   //secondary Color
   static const Color secondaryColor = Color(0xff126854);
