@@ -1,17 +1,12 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 Future<void> handleBackgroundMessage(RemoteMessage message) async {
   debugPrint('Title: ${message.notification?.title}');
   debugPrint('Title: ${message.notification?.body}');
   debugPrint('Title: ${message.data}');
 }
-
-// Future<void> handleMessage(RemoteMessage? message) async {
-//   if (message == null) return;
-
-//   Get.to(() => NotificationScreen(message: message));
-// }
 
 class FirebaseApi {
   final _firebaseMessaging = FirebaseMessaging.instance;
@@ -23,8 +18,6 @@ class FirebaseApi {
       sound: true,
     );
 
-    // FirebaseMessaging.instance.getInitialMessage().then(handleMessage);
-    // FirebaseMessaging.onMessageOpenedApp.listen(handleMessage);
     FirebaseMessaging.onBackgroundMessage(handleBackgroundMessage);
   }
 
@@ -34,5 +27,20 @@ class FirebaseApi {
     debugPrint('FCM Token: $fCMToken');
 
     initPushNotifications();
+
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      debugPrint("Foreground Message Received: ${message.notification?.body}");
+
+      // Show the notification message in a Snackbar
+      if (message.notification != null) {
+        Get.snackbar(
+          message.notification!.title ?? '',
+          message.notification!.body ?? '',
+          snackPosition: SnackPosition.TOP,
+          backgroundColor: Colors.white,
+          colorText: Colors.black,
+        );
+      }
+    });
   }
 }
