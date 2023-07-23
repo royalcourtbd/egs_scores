@@ -1,7 +1,5 @@
-import 'package:egs_scores/notification_screen.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 Future<void> handleBackgroundMessage(RemoteMessage message) async {
   debugPrint('Title: ${message.notification?.title}');
@@ -9,11 +7,11 @@ Future<void> handleBackgroundMessage(RemoteMessage message) async {
   debugPrint('Title: ${message.data}');
 }
 
-Future<void> handleMessage(RemoteMessage? message) async {
-  if (message == null) return;
+// Future<void> handleMessage(RemoteMessage? message) async {
+//   if (message == null) return;
 
-  Get.to(() => NotificationScreen(message: message));
-}
+//   Get.to(() => NotificationScreen(message: message));
+// }
 
 class FirebaseApi {
   final _firebaseMessaging = FirebaseMessaging.instance;
@@ -25,8 +23,8 @@ class FirebaseApi {
       sound: true,
     );
 
-    FirebaseMessaging.instance.getInitialMessage().then(handleMessage);
-    FirebaseMessaging.onMessageOpenedApp.listen(handleMessage);
+    // FirebaseMessaging.instance.getInitialMessage().then(handleMessage);
+    // FirebaseMessaging.onMessageOpenedApp.listen(handleMessage);
     FirebaseMessaging.onBackgroundMessage(handleBackgroundMessage);
   }
 
